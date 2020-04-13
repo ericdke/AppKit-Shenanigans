@@ -19,12 +19,12 @@ class MyButton: NSButton {
     self.focusRingType = .none
 
     let attrTitle = NSMutableAttributedString(string: self.title)
-    attrTitle.setAttributes([NSAttributedString.Key.backgroundColor : NSColor.clear, NSAttributedString.Key.foregroundColor: Config.shared.orangeColor], range: NSRange(location: 0, length: (title as NSString).length))
+    attrTitle.setAttributes([NSAttributedString.Key.backgroundColor : NSColor.clear, NSAttributedString.Key.foregroundColor: NSColor.red], range: NSRange(location: 0, length: (title as NSString).length))
     self.attributedTitle = attrTitle
 
     let attrUnder = NSMutableAttributedString(attributedString: self.attributedTitle)
     attrUnder.addAttribute(NSAttributedString.Key.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: NSRange(location: 0, length: (attributedTitle.string as NSString).length))
-    attrUnder.addAttribute(NSAttributedString.Key.underlineColor, value: Config.shared.orangeColor, range: NSRange(location: 0, length: (attributedTitle.string as NSString).length))
+    attrUnder.addAttribute(NSAttributedString.Key.underlineColor, value: NSColor.red, range: NSRange(location: 0, length: (attributedTitle.string as NSString).length))
     self.attributedTitle = attrUnder
     }
 }
