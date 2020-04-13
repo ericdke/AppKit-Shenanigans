@@ -56,7 +56,7 @@ override func viewDidAppear() {
 }
 ```
 
-When reading a file (from an NSOpenPanel, or drag&drop), pass its URL to this subclass with `noteNewRecentDocumentURL`.
+When reading a file (from an NSOpenPanel, or drag&drop), pass its URL to the NSDocumentController subclass with `noteNewRecentDocumentURL`.
 
 ```swift
 extension ViewController: MenuDelegate {
